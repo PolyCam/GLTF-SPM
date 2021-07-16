@@ -15,15 +15,9 @@ let package = Package(
     targets: [
         .target(
             name: "GLTFSceneKit",
-            path: "Sources",
+            path: "Source",
             resources: [
-                .process("Common/GLTFShaderModifierFragment_alphaCutoff.shader"),
-                .process("Common/schema/extensions/KHR_materials_pbrSpecularGlossiness/GLTFShaderModifierSurface_pbrSpecularGlossiness_texture_doubleSidedWorkaround.shader"),
-                .process("Common/schema/extensions/KHR_materials_pbrSpecularGlossiness/GLTFShaderModifierSurface_pbrSpecularGlossiness.shader"),
-                .process("Common/GLTFShaderModifierSurface.shader"),
-                .process("Common/GLTFShaderModifierSurface_doubleSidedWorkaround.shader"),
-                .process("Common/schema/extensions/KHR_materials_pbrSpecularGlossiness/GLTFShaderModifierSurface_pbrSpecularGlossiness_doubleSidedWorkaround.shader"),
-                .process("Common/GLTFShaderModifierSurface_alphaModeBlend.shader")
+                .copy("Resources"),
             ])
     ]
 )
